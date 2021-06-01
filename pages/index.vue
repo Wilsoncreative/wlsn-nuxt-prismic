@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="px-6">
     Sliczone goes here
     <!-- slice-zone type="page" uid="home" /-->
   </div>
