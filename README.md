@@ -2,10 +2,15 @@
 
 ## Configuration
 
-Create a prismic repo and add change its name in `sm.json` line 2:
+Create a prismic repo and edit the file named `sm.json` in the root of your folder, replacing the repo name with your repo name:
 
 ```json
-  "apiEndpoint": "https://[YOUR_REPO_NAME].prismic.io/api/v2",
+{
+  "apiEndpoint": "https://[YOUR-REPO-NAME].prismic.io/api/v2",
+  "libraries": ["@/slices"],
+  "_latest": "0.1.0",
+  "storybook": "http://localhost:3003"
+}
 ```
 
 This repo comes preconfigured with two Nuxt pages:

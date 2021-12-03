@@ -1,5 +1,5 @@
 {
-  "apiEndpoint": "https://[YOUR_REPO_NAME].prismic.io/api/v2",
+  "apiEndpoint": "https://wlsn-nuxt-prismic.prismic.io/api/v2",
   "libraries": [
     "@/slices"
   ],
