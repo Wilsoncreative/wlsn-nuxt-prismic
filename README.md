@@ -1,18 +1,32 @@
 # wlsn-nuxt-prismic
 
+## Configuration
+
+Create a prismic repo and add change its name in `sm.json` line 2:
+
+```json
+  "apiEndpoint": "https://[YOUR_REPO_NAME].prismic.io/api/v2",
+```
+
+This repo comes preconfigured with two custom types `page` & `home`. Theese two custom types has matching Nuxt pages where `pages/index.vue` is fetching the single type `home` and `pages/_uid.vue` is dynamicly fetching all pages using the multiple type `page`.
+
+You can chose to configure those however you want, or push them to Prismic as is.
+
 ## Build Setup
 
 ```bash
 # install dependencies
-$ yarn install
+$ npm i
 
 # serve with hot reload at localhost:3000
-$ yarn dev
+$ npm run dev
 
-# build for production and launch server
-$ yarn build
-$ yarn start
+# run slicemachine
+$ npm run slicemachine
+
+# run storybook
+$ npm run storybbok
 
 # generate static project
-$ yarn generate
+$ npm run generate
 ```
