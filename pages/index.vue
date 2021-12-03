@@ -1,5 +1,7 @@
 <template>
-  <slice-zone type="home" uid="home" />
+  <div class="p-6">
+    <slice-zone type="home" uid="home" />
+  </div>
 </template>
 
 <script>

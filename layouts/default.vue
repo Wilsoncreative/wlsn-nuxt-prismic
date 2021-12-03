@@ -1,6 +1,5 @@
 <template>
   <div>
-    <TheNavigation />
     <TheHeader />
     <Nuxt />
     <TheFooter />

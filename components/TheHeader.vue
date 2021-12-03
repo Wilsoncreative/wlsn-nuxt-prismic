@@ -1,6 +1,3 @@
 <template>
-  <header class="flex justify-between p-6">
-    Logo
-    <TheMenuToggle />
-  </header>
+  <header class="p-6">Header</header>
 </template>
