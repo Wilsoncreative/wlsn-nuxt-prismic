@@ -15,8 +15,8 @@ Create a prismic repo and edit the file named `sm.json` in the root of your fold
 
 This repo comes preconfigured with two Nuxt pages:
 
-1. `pages/index.vue` is fetching the single type named `home` with an uid of `home`.
-2. `pages/_uid.vue` is dynamicly fetching all pages using a multiple type called `page`.
+1. `pages/index.vue` is fetching a single type named `home` with an uid of `home`.
+2. `pages/_uid.vue` is dynamicly fetching all pages using a multiple type names `page`, matching the url slug against the page uid.
 
 If those are the kind of types you need, feel free to create them using Slice Machine.
 
