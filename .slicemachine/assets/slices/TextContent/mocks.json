@@ -1,0 +1,17 @@
+[
+  {
+    "variation": "default-slice",
+    "name": "Default slice",
+    "slice_type": "text_content",
+    "items": [],
+    "primary": {
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "This is just a test slice from Wilson Creative.",
+          "spans": []
+        }
+      ]
+    }
+  }
+]

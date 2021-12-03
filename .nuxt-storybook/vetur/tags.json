@@ -4,11 +4,5 @@
   },
   "TheHeader": {
     "description": "Auto imported from components/TheHeader.vue"
-  },
-  "TheMenuToggle": {
-    "description": "Auto imported from components/TheMenuToggle.vue"
-  },
-  "TheNavigation": {
-    "description": "Auto imported from components/TheNavigation.vue"
   }
 }

@@ -8,5 +8,3 @@ You can directly use them in pages and other components without the need to impo
 
 - `<TheFooter>` | `<the-footer>` (components/TheFooter.vue)
 - `<TheHeader>` | `<the-header>` (components/TheHeader.vue)
-- `<TheMenuToggle>` | `<the-menu-toggle>` (components/TheMenuToggle.vue)
-- `<TheNavigation>` | `<the-navigation>` (components/TheNavigation.vue)

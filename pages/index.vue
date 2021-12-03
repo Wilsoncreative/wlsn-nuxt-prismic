@@ -1,6 +1,6 @@
 <template>
   <div class="p-6">
-    <slice-zone type="home" uid="home" />
+    <slice-zone type="homepage" uid="home" />
   </div>
 </template>
 

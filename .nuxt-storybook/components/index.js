@@ -1,7 +1,5 @@
 export { default as TheFooter } from '../../components/TheFooter.vue'
 export { default as TheHeader } from '../../components/TheHeader.vue'
-export { default as TheMenuToggle } from '../../components/TheMenuToggle.vue'
-export { default as TheNavigation } from '../../components/TheNavigation.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {
