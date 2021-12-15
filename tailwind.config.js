@@ -1,11 +1,6 @@
 module.exports = {
-  mode: 'jit',
-  purge: [],
-  darkMode: false, // or 'media' or 'class'
+  content: ['./slices/**/*.vue', './pages/**/*.vue', './components/**/*.vue'],
   theme: {
-    extend: {},
-  },
-  variants: {
     extend: {},
   },
   plugins: [],

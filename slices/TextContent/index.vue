@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="container mx-auto">
     <prismic-rich-text :field="slice.primary.content" class="content" />
   </section>
 </template>

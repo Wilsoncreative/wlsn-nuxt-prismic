@@ -1,7 +1,16 @@
 <template>
-  <div>
+  <div class="flex flex-col min-h-screen">
     <TheHeader />
-    <Nuxt />
+    <main class="flex-grow">
+      <Nuxt />
+    </main>
     <TheFooter />
   </div>
 </template>
+
+<style lang="postcss" scoped>
+html,
+body {
+  @apply min-h-screen;
+}
+</style>
