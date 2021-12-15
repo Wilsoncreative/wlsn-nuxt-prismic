@@ -24,8 +24,8 @@
         >
           <header class="flex justify-between items-center">
             <h3
-              @click="cookie.open = !cookie.open"
               class="cursor-pointer flex items-center"
+              @click="cookie.open = !cookie.open"
             >
               <Chevron
                 class="mr-2 w-4 h-4"
@@ -42,9 +42,9 @@
             <div v-else>
               <input
                 id="check"
+                v-model="cookie.value"
                 type="checkbox"
                 class="hidden"
-                v-model="cookie.value"
               />
               <label
                 for="check"
@@ -67,16 +67,16 @@
           Accept all cookies
         </button>
         <button
+          v-if="!settings"
           class="py-2 px-4 bg-gray-500"
           @click="showSettings"
-          v-if="!settings"
         >
           Manage settings
         </button>
         <button
+          v-if="settings"
           class="py-2 px-4 bg-gray-500"
           @click="saveConfiguration"
-          v-if="settings"
         >
           Save configuration
         </button>
@@ -117,6 +117,13 @@ export default {
       },
     }
   },
+  mounted() {
+    this.currentCookieSettings = this.$cookies.get('enableCookies')
+
+    if (this.currentCookieSettings === 'all') {
+      this.enableTracking()
+    }
+  },
   methods: {
     enableTracking() {
       bootstrap().then((gtag) => {})
@@ -154,13 +161,6 @@ export default {
     showSettings() {
       this.settings = true
     },
-  },
-  mounted() {
-    this.currentCookieSettings = this.$cookies.get('enableCookies')
-
-    if (this.currentCookieSettings === 'all') {
-      this.enableTracking()
-    }
   },
 }
 </script>
