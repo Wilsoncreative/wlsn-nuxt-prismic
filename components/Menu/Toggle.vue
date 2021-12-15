@@ -1,5 +1,12 @@
 <template>
-  <button class="w-12 h-12 relative" @click="toggleMenu">
+  <button
+    id="mainNavButton"
+    class="w-12 h-12 relative"
+    aria-haspopup="true"
+    aria-controls="mainNav"
+    :aria-expanded="menuOpen"
+    @click="toggleMenu"
+  >
     <transition-group
       enter-class="-rotate-90 opacity-0"
       enter-active-class="transition-all duration-300 ease-in-out"
@@ -9,13 +16,13 @@
     >
       <ToggleIcon
         v-if="!menuOpen"
+        key="open"
         class="w-6 h-6 absolute top-3 left-3 transform"
-        key="1"
       />
       <CloseIcon
         v-else
+        key="close"
         class="w-6 h-6 absolute top-3 left-3 transform"
-        key="2"
       />
     </transition-group>
   </button>

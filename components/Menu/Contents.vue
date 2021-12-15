@@ -8,7 +8,10 @@
   >
     <nav
       v-if="open"
-      class="w-96 p-6 h-full fixed top-0 right-0 bottom-0 bg-gray-200 transform drop-shadow-xl"
+      id="mainNav"
+      role="menu"
+      aria-labelledby="mainNavButton"
+      class="w-96 p-6 h-full fixed top-0 right-0 bottom-0 bg-gray-200 transform drop-shadow-2xl"
     >
       Menu
     </nav>
