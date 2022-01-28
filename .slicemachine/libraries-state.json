@@ -1,0 +1,62 @@
+{
+  "slices": {
+    "components": {
+      "text_content": {
+        "library": "slices",
+        "id": "text_content",
+        "name": "TextContent",
+        "description": "TextContent",
+        "model": {
+          "id": "text_content",
+          "type": "SharedSlice",
+          "name": "TextContent",
+          "description": "TextContent",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "TextContent",
+              "primary": {
+                "content": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Content",
+                    "placeholder": "A nice description of your product",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                }
+              },
+              "items": {}
+            }
+          ]
+        },
+        "mocks": {
+          "default-slice": {
+            "variation": "default-slice",
+            "name": "Default slice",
+            "slice_type": "text_content",
+            "items": [],
+            "primary": {
+              "content": [
+                {
+                  "type": "paragraph",
+                  "text": "Fugiat quis sunt eu deserunt. Id dolore commodo do ullamco sit ad excepteur minim magna.",
+                  "spans": []
+                }
+              ]
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "isDirectory": true,
+          "extension": "vue"
+        },
+        "screenshotPaths": {}
+      }
+    }
+  }
+}

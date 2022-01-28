@@ -5,6 +5,15 @@
   "status": true,
   "json": {
     "Main": {
+      "title": {
+        "config": {
+          "label": "Title",
+          "placeholder": "",
+          "allowTargetBlank": false,
+          "single": "heading1"
+        },
+        "type": "StructuredText"
+      },
       "uid": {
         "config": {
           "label": "UID",
@@ -38,6 +47,14 @@
           "placeholder": ""
         },
         "type": "Text"
+      },
+      "metaImage": {
+        "config": {
+          "label": "metaImage",
+          "constraint": {},
+          "thumbnails": []
+        },
+        "type": "Image"
       }
     }
   }

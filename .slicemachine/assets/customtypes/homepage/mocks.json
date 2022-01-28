@@ -1,9 +1,25 @@
 {
-  "id": "0e0faaad-cce8-464d-bbd0-1630fff7b80c",
-  "uid": "officiis-tempore-voluptatum",
+  "id": "7d017629-c946-48b3-96aa-f2a398e69226",
+  "uid": "cumque-vel-deleniti",
   "type": "homepage",
   "data": {
-    "metaTitle": "engage user-centric markets",
-    "metaDescription": "optimize innovative content"
+    "title": [
+      {
+        "type": "heading1",
+        "text": "Unleash efficient channels",
+        "spans": []
+      }
+    ],
+    "metaTitle": "optimize clicks-and-mortar web-readiness",
+    "metaDescription": "e-enable dot-com bandwidth",
+    "metaImage": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51?w=900&h=500&fit=crop"
+    }
   }
 }

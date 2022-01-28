@@ -1,7 +1,39 @@
 {
-  "slices": {},
+  "slices": {
+    "TextContent": [
+      {
+        "variation": "default-slice",
+        "name": "Default slice",
+        "slice_type": "text_content",
+        "items": [],
+        "primary": {
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Aute sunt nostrud adipisicing pariatur sit quis elit excepteur incididunt.",
+              "spans": []
+            }
+          ]
+        }
+      }
+    ]
+  },
   "_cts": {
-    "page": {},
-    "homepage": {}
+    "page": {
+      "title": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      }
+    },
+    "homepage": {
+      "title": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      }
+    }
   }
 }

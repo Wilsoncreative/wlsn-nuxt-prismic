@@ -5,12 +5,14 @@
   "status": true,
   "json": {
     "Main": {
-      "uid": {
+      "title": {
         "config": {
-          "label": "UID",
-          "placeholder": ""
+          "label": "Title",
+          "placeholder": "",
+          "allowTargetBlank": false,
+          "single": "heading1"
         },
-        "type": "UID"
+        "type": "StructuredText"
       },
       "slices": {
         "type": "Slices",
@@ -38,6 +40,14 @@
           "placeholder": ""
         },
         "type": "Text"
+      },
+      "metaImage": {
+        "config": {
+          "label": "metaImage",
+          "constraint": {},
+          "thumbnails": []
+        },
+        "type": "Image"
       }
     }
   }

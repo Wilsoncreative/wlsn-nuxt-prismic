@@ -1,5 +1,4 @@
 import smConfig from './sm.json'
-import { getStoriesPaths } from 'slice-machine-ui/helpers/storybook'
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
@@ -8,11 +7,6 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'wlsn-nuxt-prismic',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-    ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
@@ -50,14 +44,6 @@ export default {
   build: {
     transpile: ['vue-slicezone', 'nuxt-sm'],
   },
-
-  storybook: {
-    // This is a bug with `getStoriesPaths` and Nuxt that is awaiting to be fixed
-    stories: [...getStoriesPaths().map((path) => path.replace('../', '~/'))],
-  },
-
-  // This is a bug with `getStoriesPaths` and Nuxt that is awaiting to be fixed
-  ignore: [...getStoriesPaths().map((path) => path.replace('../', '~/'))],
 
   generate: {
     fallback: '404.html', // Netlify reads a 404.html, Nuxt will load as an SPA

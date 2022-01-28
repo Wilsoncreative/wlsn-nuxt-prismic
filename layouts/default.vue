@@ -5,7 +5,7 @@
       <Nuxt />
     </main>
     <TheFooter />
-    <CookieNotice />
+    <GdprNotice />
   </div>
 </template>
 
