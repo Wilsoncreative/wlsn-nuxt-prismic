@@ -1,8 +1,8 @@
 <template>
   <div>
     <div
-      class="w-full h-full fixed inset-0 bg-black bg-opacity-70 px-5 flex items-center justify-center overflow-auto"
       v-if="!currentCookieSettings || settings"
+      class="w-full h-full fixed inset-0 bg-black bg-opacity-70 px-5 flex items-center justify-center overflow-auto"
     >
       <div
         class="w-full bg-white p-5 md:p-8 lg:p-12 max-w-xl drop-shadow-2xl rounded-lg text-xs md:text-base"
@@ -94,9 +94,9 @@
       </div>
     </div>
     <GdprSettings
-      @showTheSettings="showSettings"
       class="transform duration-200"
       :class="[settings ? 'translate-x-full' : '']"
+      @showTheSettings="showSettings"
     />
   </div>
 </template>

@@ -3,7 +3,7 @@ module.exports = {
     './pages/**/*.vue',
     './components/**/*.vue',
     './layouts/**/*.vue',
-    './slices/**/*.vue'
+    './slices/**/*.vue',
   ],
   theme: {
     extend: {},
