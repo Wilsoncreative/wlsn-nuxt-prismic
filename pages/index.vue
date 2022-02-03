@@ -11,13 +11,13 @@ export default {
   components: {
     SliceZone,
   },
-  data() {
-    return {
-      doc: null,
+  async asyncData({ $prismic, params, error }) {
+    const doc = await $prismic.api.getSingle('homepage')
+    if (doc) {
+      return { doc }
+    } else {
+      error({ statusCode: 404, message: 'Sidan kunde inte hittas' })
     }
-  },
-  async fetch() {
-    this.doc = await this.$prismic.api.getSingle('homepage')
   },
   head() {
     return {
