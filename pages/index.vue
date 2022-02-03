@@ -1,6 +1,6 @@
 <template>
   <div class="p-6">
-    <slice-zone type="homepage" queryType="single" />
+    <slice-zone type="homepage" query-type="single" />
   </div>
 </template>
 
@@ -11,32 +11,29 @@ export default {
   components: {
     SliceZone,
   },
+  data() {
+    return {
+      doc: null,
+    }
+  },
+  async fetch() {
+    this.doc = await this.$prismic.api.getSingle('homepage')
+  },
   head() {
     return {
-      title: this.page.data.metaTitle ?? this.page.data.title[0].text,
+      title: this.doc.data.metaTitle ?? this.doc.data.title[0].text,
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: this.page.data.metaDescription ?? '',
+          content: this.doc.data.metaDescription ?? '',
         },
         {
           hid: 'og:image',
           name: 'og:image',
-          content: this.page.data.metaImage ?? '',
+          content: this.doc.data.metaImage.url ?? '',
         },
       ],
-    }
-  },
-  async asyncData({ $prismic, params, error }) {
-    // Fetch all date for homepage
-    const document = await $prismic.api.getSingle('homepage')
-    if (document) {
-      return {
-        page: document,
-      }
-    } else {
-      error({ statusCode: 404, message: 'Page not found' })
     }
   },
 }

@@ -1,4 +1,7 @@
 import smConfig from './sm.json'
+import axios from 'axios'
+import {getPrismicRedirects, prismicRedirects} from './plugins/createRedirects'
+getPrismicRedirects()
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
@@ -25,6 +28,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
+    '@nuxtjs/netlify-files',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -53,5 +57,38 @@ export default {
 
   generate: {
     fallback: '404.html', // Netlify reads a 404.html, Nuxt will load as an SPA
+    routes: async function () {
+      const ref = await axios.get(smConfig.apiEndpoint).then((res) => {
+        for (let index = 0; index < res.data.refs.length; index++) {
+            if ( res.data.refs[index].isMasterRef ) {
+              return res.data.refs[index].ref
+            }
+        }
+      })
+
+      const pages = axios
+        .get(smConfig.apiEndpoint + '/documents/search?ref='+ref+'&pageSize=100&q=[[at(document.type,"page")]]#format=json')
+        .then((res) => {
+          return res.data.results.map((doc) => `/${doc.uid}`)
+        })
+
+      // generate routes
+      return Promise.all([pages]).then((values) => {
+        let array = values.join().split(',')
+        return array
+      })
+    }
+  },
+
+  netlifyFiles: {
+    netlifyToml: {
+      headers: [
+        {
+          for: '/*',
+          values: { 'X-XSS-Protection': '1; mode=block' },
+        },
+      ],
+      redirects: prismicRedirects,
+    },
   },
 }

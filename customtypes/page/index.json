@@ -50,7 +50,7 @@
       },
       "metaImage": {
         "config": {
-          "label": "metaImage",
+          "label": "Meta image",
           "constraint": {},
           "thumbnails": []
         },

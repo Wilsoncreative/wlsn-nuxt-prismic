@@ -6,36 +6,34 @@
 
 <script>
 import SliceZone from 'vue-slicezone'
+
 export default {
   components: {
     SliceZone,
   },
+  data() {
+    return {
+      doc: null,
+    }
+  },
+  async fetch() {
+    this.doc = await this.$prismic.api.getSingle('homepage')
+  },
   head() {
     return {
-      title: this.page.data.metaTitle ?? this.page.data.title[0].text,
+      title: this.doc.data.metaTitle ?? this.doc.data.title[0].text,
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: this.page.data.metaDescription,
+          content: this.doc.data.metaDescription ?? '',
         },
         {
           hid: 'og:image',
           name: 'og:image',
-          content: this.page.data.metaImage,
+          content: this.doc.data.metaImage.url ?? '',
         },
       ],
-    }
-  },
-  async asyncData({ $prismic, params, error }) {
-    // Fetch all date for page
-    const document = await $prismic.api.getByUID('page', params.uid)
-    if (document) {
-      return {
-        page: document,
-      }
-    } else {
-      error({ statusCode: 404, message: 'Page not found' })
     }
   },
 }
