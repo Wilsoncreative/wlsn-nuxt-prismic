@@ -1,6 +1,9 @@
 import smConfig from './sm.json'
 import axios from 'axios'
-import {getPrismicRedirects, prismicRedirects} from './plugins/createRedirects'
+import {
+  getPrismicRedirects,
+  prismicRedirects,
+} from './plugins/createRedirects'
 getPrismicRedirects()
 
 export default {
@@ -14,9 +17,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    '@/assets/css/tailwind.css',
-  ],
+  css: ['@/assets/css/tailwind.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: ['~/plugins/gtag.js'],
@@ -29,6 +30,7 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     '@nuxtjs/netlify-files',
+    '@nuxt/postcss8',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -60,14 +62,19 @@ export default {
     routes: async function () {
       const ref = await axios.get(smConfig.apiEndpoint).then((res) => {
         for (let index = 0; index < res.data.refs.length; index++) {
-            if ( res.data.refs[index].isMasterRef ) {
-              return res.data.refs[index].ref
-            }
+          if (res.data.refs[index].isMasterRef) {
+            return res.data.refs[index].ref
+          }
         }
       })
 
       const pages = axios
-        .get(smConfig.apiEndpoint + '/documents/search?ref='+ref+'&pageSize=100&q=[[at(document.type,"page")]]#format=json')
+        .get(
+          smConfig.apiEndpoint +
+            '/documents/search?ref=' +
+            ref +
+            '&pageSize=100&q=[[at(document.type,"page")]]#format=json'
+        )
         .then((res) => {
           return res.data.results.map((doc) => `/${doc.uid}`)
         })
@@ -77,7 +84,7 @@ export default {
         let array = values.join().split(',')
         return array
       })
-    }
+    },
   },
 
   netlifyFiles: {
