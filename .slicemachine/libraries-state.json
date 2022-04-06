@@ -52,10 +52,15 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default-slice": {
+            "path": "/Users/robinkenell/www/wlsn-nuxt-prismic/.slicemachine/assets/slices/TextContent/default-slice/preview.png",
+            "width": 800,
+            "height": 48
+          }
+        }
       }
     }
   }

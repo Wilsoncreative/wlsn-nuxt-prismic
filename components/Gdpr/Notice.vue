@@ -160,6 +160,9 @@ export default {
         maxAge: 60 * 60 * 24 * 7,
       })
       this.currentCookieSettings = 'all'
+      this.settings = false
+      this.cookies.strict.value = true
+      this.cookies.analytics.value = true
     },
     saveConfiguration() {
       if (this.cookies.analytics.value) {

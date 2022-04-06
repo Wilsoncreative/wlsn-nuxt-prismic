@@ -39,6 +39,7 @@ export default {
       '@nuxtjs/prismic',
       {
         endpoint: smConfig.apiEndpoint || '',
+        modern: true,
       },
     ],
     ['nuxt-sm'],
@@ -48,7 +49,7 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-    transpile: ['vue-slicezone', 'nuxt-sm'],
+    transpile: ['vue-slicezone', 'nuxt-sm', '@prismicio/vue'],
     postcss: {
       plugins: {
         tailwindcss: {},
