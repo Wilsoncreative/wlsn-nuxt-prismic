@@ -95,10 +95,18 @@ export default {
           smConfig.apiEndpoint +
             '/documents/search?ref=' +
             ref +
-            '&pageSize=100&q=[[at(document.type,"page")]]#format=json'
+            '&pageSize=100&q=[[at(document.type,"page")]]&fetchLinks=page.parent#format=json'
         )
         .then((res) => {
-          return res.data.results.map((doc) => `/${doc.uid}`)
+          return res.data.results.map((doc) => {
+            if (hasGrandparent(doc)) {
+              return `/${doc.data.parent.data.parent.uid}/${doc.data.parent.uid}/${doc.uid}`
+            } else if (hasParent(doc)) {
+              return `/${doc.data.parent.uid}/${doc.uid}`
+            } else {
+              return `/${doc.uid}`
+            }
+          })
         })
 
       // generate routes
@@ -120,4 +128,24 @@ export default {
       redirects: prismicRedirects,
     },
   },
+}
+
+function hasGrandparent(doc) {
+  if (hasProp(doc.data.parent, 'data')) {
+    if (hasProp(doc.data.parent.data, 'parent')) {
+      return true
+    } else {
+      return false
+    }
+  } else {
+    return false
+  }
+}
+
+function hasParent(doc) {
+  return hasProp(doc.data.parent, 'uid')
+}
+
+function hasProp(obj, prop) {
+  return Object.prototype.hasOwnProperty.call(obj, prop)
 }
