@@ -1,9 +1,11 @@
 <template>
   <div>
     <MenuContents :open="menuOpen" />
-    <header class="p-3 bg-gray-400 flex items-center justify-between">
-      Header
-      <MenuToggle @menuToggle="toggleMenu" />
+    <header class="py-3 bg-gray-400">
+      <div class="container flex items-center justify-between">
+        Header
+        <MenuToggle @menuToggle="toggleMenu" />
+      </div>
     </header>
   </div>
 </template>

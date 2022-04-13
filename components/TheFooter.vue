@@ -1,3 +1,5 @@
 <template>
-  <footer class="p-6 bg-gray-400">Footer</footer>
+  <footer class="py-6 bg-gray-400">
+    <div class="container">Footer</div>
+  </footer>
 </template>

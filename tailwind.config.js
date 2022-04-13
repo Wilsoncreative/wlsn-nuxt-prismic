@@ -6,7 +6,11 @@ module.exports = {
     './slices/**/*.vue',
   ],
   theme: {
-    extend: {},
+    extend: {
+      container: {
+        center: true
+      }
+    },
   },
   plugins: [],
 }

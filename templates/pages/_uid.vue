@@ -1,6 +1,7 @@
 <template>
-  <div class="p-6">
-    <slice-zone type="page" :uid="$route.params.uid" />
+  <div>
+    <Breadcrumbs :home-doc="{ path: '/', title: 'Home' }" :current-doc="doc" />
+    <slice-zone type="page" :uid="uid" />
   </div>
 </template>
 
@@ -11,8 +12,31 @@ export default {
   components: {
     SliceZone,
   },
+  computed: {
+    uid() {
+      // Get the right uid from folder stucture
+      if (this.$route.params.uid) {
+        return this.$route.params.uid
+      } else if (this.$route.params.parent) {
+        return this.$route.params.parent
+      } else {
+        return this.$route.params.grandparent
+      }
+    },
+  },
   async asyncData({ $prismic, params, error }) {
-    const doc = await $prismic.api.getByUID('page', params.uid)
+    // Get the right uid from folder stucture
+    let uid = ''
+    if (params.uid) {
+      uid = params.uid
+    } else if (params.parent) {
+      uid = params.parent
+    } else {
+      uid = params.grandparent
+    }
+    const doc = await $prismic.api.getByUID('page', uid, {
+      fetchLinks: ['page.parent', 'page.title'],
+    })
     if (doc) {
       return { doc }
     } else {

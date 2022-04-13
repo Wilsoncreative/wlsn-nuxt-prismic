@@ -23,7 +23,12 @@ export default {
   plugins: ['~/plugins/gtag.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  components: {
+    dirs: [
+      '~/components',
+      '~/components/Layout',
+    ]
+  },
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
@@ -40,6 +45,22 @@ export default {
       {
         endpoint: smConfig.apiEndpoint || '',
         modern: true,
+        apiOptions: {
+          routes: [
+            {
+              type: 'homepage',
+              path: '/:lang?/',
+            },
+            {
+              type: 'page',
+              path: '/:lang?/:grandparent?/:parent?/:uid',
+              resolvers: {
+                grandparent: 'parent.parent',
+                parent: 'parent',
+              },
+            },
+          ],
+        },
       },
     ],
     ['nuxt-sm'],

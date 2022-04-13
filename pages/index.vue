@@ -1,5 +1,5 @@
 <template>
-  <div class="p-6">
+  <div>
     <slice-zone type="homepage" query-type="single" />
   </div>
 </template>

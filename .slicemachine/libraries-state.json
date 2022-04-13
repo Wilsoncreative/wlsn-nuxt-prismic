@@ -56,7 +56,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/robinkenell/www/wlsn-nuxt-prismic/.slicemachine/assets/slices/TextContent/default-slice/preview.png",
+            "path": "/home/robinkenell/www/wlsn-nuxt-prismic/.slicemachine/assets/slices/TextContent/default-slice/preview.png",
             "width": 800,
             "height": 48
           }

@@ -3,11 +3,13 @@ export default function (doc) {
     return '/not-found'
   }
 
-  if (doc.type === 'homepage') {
-    return '/'
+  if (doc.url) {
+    if (doc.lang === 'sv-se') {
+      return doc.url.replace('/sv-se', '')
+    } else {
+      return doc.url.replace('/en-us', '/en')
+    }
   }
 
-  if (doc.type === 'page') {
-    return `/${doc.uid}`
-  }
+  return null
 }

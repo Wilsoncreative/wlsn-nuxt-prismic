@@ -21,6 +21,16 @@
         },
         "type": "UID"
       },
+      "parent": {
+        "config": {
+          "label": "Parent",
+          "customtypes": [
+            "page"
+          ],
+          "select": "document"
+        },
+        "type": "Link"
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

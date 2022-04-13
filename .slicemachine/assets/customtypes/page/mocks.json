@@ -1,17 +1,21 @@
 {
-  "id": "e7be45f9-f841-4324-a71f-4abd66df5ffe",
-  "uid": "repellat-sint-saepe",
+  "id": "2cb02585-b906-45de-a78a-3ef8be6aea50",
+  "uid": "ipsum-et-et",
   "type": "page",
   "data": {
     "title": [
       {
         "type": "heading1",
-        "text": "Deploy collaborative platforms",
+        "text": "Facilitate strategic functionalities",
         "spans": []
       }
     ],
-    "metaTitle": "embrace value-added web-readiness",
-    "metaDescription": "synthesize user-centric deliverables",
+    "parent": {
+      "link_type": "Web",
+      "url": "http://google.com"
+    },
+    "metaTitle": "transition synergistic e-services",
+    "metaDescription": "redefine revolutionary e-tailers",
     "metaImage": {
       "dimensions": {
         "width": 900,
@@ -19,7 +23,7 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da?w=900&h=500&fit=crop"
     }
   }
 }
