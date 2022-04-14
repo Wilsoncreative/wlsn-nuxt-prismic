@@ -37,6 +37,7 @@
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^7.12.1",
+    "nuxt-shopify": "^1.14.0",
     "nuxt-sm": "0.1.5",
     "postcss": "8.4.5",
     "prettier": "^2.3.2",

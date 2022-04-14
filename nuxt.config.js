@@ -24,10 +24,7 @@ export default {
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: {
-    dirs: [
-      '~/components',
-      '~/components/Layout',
-    ]
+    dirs: ['~/components', '~/components/Layout'],
   },
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
@@ -66,6 +63,7 @@ export default {
     ['nuxt-sm'],
     '@nuxtjs/svg',
     'cookie-universal-nuxt',
+    'nuxt-shopify',
   ],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
@@ -115,6 +113,12 @@ export default {
         return array
       })
     },
+  },
+
+  shopify: {
+    domain: 'wilson-creative-test.myshopify.com',
+    storefrontAccessToken: 'ca1b0b72a5eb621be27840525de9b3c1',
+    unoptimized: false,
   },
 
   netlifyFiles: {
