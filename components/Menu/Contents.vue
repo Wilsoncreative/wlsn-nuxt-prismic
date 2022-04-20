@@ -11,7 +11,7 @@
       id="mainNav"
       role="menu"
       aria-labelledby="mainNavButton"
-      class="w-96 p-6 h-full fixed top-0 right-0 bottom-0 bg-gray-200 transform drop-shadow-2xl"
+      class="w-96 p-6 h-full fixed top-0 right-0 bottom-0 bg-white transform drop-shadow-2xl z-10"
     >
       Menu
     </nav>

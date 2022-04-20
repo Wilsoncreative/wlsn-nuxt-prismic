@@ -1,6 +1,6 @@
 <template>
   <div
-    class="fixed w-10 h-10 z-50 bg-black text-white right-0 bottom-5 p-2 cursor-pointer rounded-tl-md rounded-bl-md"
+    class="fixed w-10 h-10 z-40 bg-black text-white right-0 bottom-5 p-2 cursor-pointer rounded-tl-md rounded-bl-md"
     @click="$emit('showTheSettings')"
   >
     <svg

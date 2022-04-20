@@ -31,7 +31,7 @@ export default {
   methods: {
     addToCart() {
       this.$store.commit('cart/addItem', {
-        id: this.product.id,
+        id: this.product.variants[0].id,
         title: this.product.title,
         image: this.product.images[0],
         price: parseInt(this.product.variants[0].price),

@@ -6,7 +6,6 @@
     </main>
     <TheFooter />
     <GdprNotice />
-    <ShopCart />
   </div>
 </template>
 <script>
