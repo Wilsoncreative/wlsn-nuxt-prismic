@@ -11,6 +11,7 @@ export default {
   components: {
     SliceZone,
   },
+  transition: 'default',
   async asyncData({ $prismic, params, error }) {
     const doc = await $prismic.api.getSingle('homepage')
     if (doc) {

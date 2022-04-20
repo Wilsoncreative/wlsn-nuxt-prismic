@@ -12,6 +12,7 @@ export default {
   components: {
     SliceZone,
   },
+  transition: 'default',
   computed: {
     uid() {
       // Get the right uid from folder stucture

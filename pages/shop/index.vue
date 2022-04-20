@@ -1,15 +1,12 @@
 <template>
-  <div class="container my-10">
-    <div class="-mx-5 flex flex-wrap">
+  <div class="px-5 my-10">
+    <div class="-mx-2.5 flex flex-wrap">
       <div
-        class="w-full sm:w-1/3 md:w-1/4 lg:w-1/5 px-5"
+        class="w-full sm:w-1/3 px-2.5"
         v-for="(product, index) in products"
         :key="index"
       >
         <ShopProductCard :product="product" />
-        <pre>{{
-          product.variants[0].id.replace('gid://shopify/ProductVariant/', '')
-        }}</pre>
       </div>
     </div>
     <a
@@ -22,6 +19,7 @@
 
 <script>
 export default {
+  transition: 'default',
   async asyncData({ $shopify }) {
     const products = await $shopify.product.fetchAll()
     return { products }

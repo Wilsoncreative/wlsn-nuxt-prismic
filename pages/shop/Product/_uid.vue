@@ -3,7 +3,9 @@
 </template>
 
 <script>
-export default {}
+export default {
+  transition: 'default',
+}
 </script>
 
 <style></style>

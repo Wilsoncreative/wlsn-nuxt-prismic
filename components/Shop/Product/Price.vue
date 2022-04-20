@@ -1,6 +1,6 @@
 <template>
   <div class="flex">
-    <div v-if="data.compareAtPrice" class="mr-3 line-through">
+    <div v-if="data.compareAtPrice" class="mr-1.5 line-through">
       {{ data.compareAtPrice.replace('.00', '') }}
       {{ data.compareAtPriceV2.currencyCode }}
     </div>
