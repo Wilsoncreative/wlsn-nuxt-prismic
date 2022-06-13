@@ -41,6 +41,7 @@ export default {
         {
           hid: 'og:image',
           name: 'og:image',
+          property: 'og:image',
           content: this.doc.data.metaImage.url ?? '',
         },
         {
